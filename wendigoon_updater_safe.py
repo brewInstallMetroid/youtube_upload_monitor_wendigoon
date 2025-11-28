@@ -114,11 +114,11 @@ def message_discord(goon, gang, cast) -> None:
     if any([goon, gang, cast]):
         content = "***{ Begin Transmission of New Wendigoon/CreepCast Content }***\n" 
     if goon:
-        content += f"\n\tNEW WENDIGOON EPISODE RELEASED:{goon}\n"
+        content += f"\n\tNew WENDIGOON Episode Released:{goon}\n"
     if gang:
-        content += f"\n\tNEW WENDIGANG EPISODE RELEASED:{gang}\n"
+        content += f"\n\tNew WENDIGANG Episode Released:{gang}\n"
     if cast:
-        content += f"\n\tNEW CREEPCAST EPISODE RELEASED:{cast}\n\n"
+        content += f"\n\tNew CREEPCAST Episode Released:{cast}\n\n"
     if any([goon, gang, cast]):
         content += "\tIf you have any questions, bugs to report, or would like a new YT channel added to this updater, let the bot creator know.\n\n"
         content += "***{ End Transmission }***"
