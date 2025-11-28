@@ -42,7 +42,8 @@ def main() -> None:
                     (True, True, False): lambda: (store_titles(goon_vid, gang_vid, False), message_discord(goon_vid, gang_vid, False)),
                     (True, False, True): lambda: (store_titles(goon_vid, False, cast_vid), message_discord(goon_vid, False, cast_vid)),         
                     (False, True, True): lambda: (store_titles(False, gang_vid, cast_vid), message_discord(False, gang_vid, cast_vid)),
-                    (True, True, True): lambda: (store_titles(goon_vid, gang_vid, cast_vid), message_discord(goon_vid, gang_vid, cast_vid))
+                    (True, True, True): lambda: (store_titles(goon_vid, gang_vid, cast_vid), message_discord(goon_vid, gang_vid, cast_vid)),
+                    (False, False, False): lambda: (print("\n\n***NO NEW CONTENT DETECTED***\n\n"))
                 }
 
                 goon_bool = False
