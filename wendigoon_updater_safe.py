@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from googleapiclient.discovery import build
 from discord_webhook import DiscordWebhook
+from time import sleep
+from datetime import datetime
 
 WEBHOOK_URL = "YOUR DISCORD WEBHOOK URL HERE"
 DEVELOPER_KEY = "YOUR API KEY HERE"
@@ -128,5 +130,13 @@ def message_discord(goon, gang, cast) -> None:
 
 
 if __name__ == "__main__":
-    main()
+    while True:
+        try:
+            main()
+        except Exception as e:
+            print(f"An error occurred: {e} @ {datetime.now()}")
+        
+        print(f"Checked for new videos at {datetime.now()}. Next check in 30 minutes.")
+        sleep(1800)  # Wait for 30 minutes before checking again
+
     '''Thank you for checking out my code! If you have any questions, feel free to reach out.'''
